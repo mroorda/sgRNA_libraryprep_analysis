@@ -1,2 +1,2 @@
 # sgRNA_libraryprep_analysis
-Analysis of NGS data from pooled sgRNA libraries to assess complexity
+Analysis of NGS data from pooled sgRNA libraries to assess library complexity
