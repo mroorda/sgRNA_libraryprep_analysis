@@ -9,11 +9,12 @@ import sys
 import argparse
 import os
 import gzip
-#os.chdir("E:/180502_NB501840_0073_AHMYHLBGX5/MB180423")
+## Set working directory
+os.chdir("")
 
 KEY_REGION_START = 20 #start index of key region
 KEY_REGION_END = 60 #end index of key region
-KEY = "AAAGGACGAAACACC" #identifies sequence before guide to determine guide position
+KEY = "AAAGGACGAAACACC" #identifies sequence before guide to determine guide position. This can be found in the library preparation protocol provided by the depositors
 
 def count_spacers(input_file, fastq_file, output_file, guide_g): 
 	"""
