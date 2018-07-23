@@ -1,13 +1,22 @@
+## Merge .fastq files
+## Maurits Roorda
+## 2018-07-27
+## Version 1.0
+
 ## This script serves to merge 2 .fastq files into 1 .fastq file
 
+## Import packages
 from Bio import SeqIO
 import itertools
 import sys
 import os
 import shutil
 
-os.chdir('E:/180502_NB501840_0073_AHMYHLBGX5/MB180423/MB180423_007_S7_R1_001.fastq')
+## Set working directory
+os.chdir('')
+
+## Take file_1.fastq and take file_2.fastq and merge them into NGS.fastq
 with open('NGS.fastq', 'wb') as outFile:
-    with open('MB180423_007_S7_R1_001.fastq', 'rb') as com, open('MB180423_008_S8_R1_001.fastq', 'rb') as fort13:
-        shutil.copyfileobj(com, outFile)
-        shutil.copyfileobj(fort13, outFile)
+    with open('file_1.fastq', 'rb') as file_1, open('file_2.fastq', 'rb') as file_2:
+        shutil.copyfileobj(file_1, outFile)
+        shutil.copyfileobj(file_2, outFile)
